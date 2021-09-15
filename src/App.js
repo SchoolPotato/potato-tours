@@ -1,17 +1,18 @@
 import Tour from "./Components/Tour";
 import { useState, useEffect } from 'react'
-const url = "https://course-api.com/react-tours-project";
 
 function App() {
+  const url = "https://course-api.com/react-tours-project";
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
-  const [person, setPerson] = useState({});
+  const [tour, setTour] = useState({});
+  const [tours, setTours] = useState({});
 
   useEffect(()=>{
     fetch(url)
     .then((response)=>response.json())
-    .then((user)=>{
-      const {login, avatar_url} = user 
+    .then((tours)=>{
+      setTours(tours);
       setIsLoading(false);
     })
     .catch((error)=>{
