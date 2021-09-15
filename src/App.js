@@ -19,17 +19,16 @@ function App() {
       (error) ? setIsError(true) : setIsError(false);
     });
   }, []);
-//  console.log(tours);
-
-          tours.map((tour) => {
-          return <Tour key={tour.id} name={tour.name} />
-          console.log(tour);
-        })
+  console.log(typeof tours);
 
   return (
     <div className="App">
       <h1 id="centered">Our Tours</h1>
       <hr id="centered"></hr>
+      {(isLoading == false) ? tours.map((tour) => {
+        //console.log(tour);
+        return <Tour key={tour.id} name={tour.name} info={tour.info} image={tour.image} />
+      }): console.log("whoops")}
     </div>
   );
 }
