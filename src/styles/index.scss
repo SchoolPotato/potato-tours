@@ -1,0 +1,61 @@
+// Variables
+$info-blue: #4898d1;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #dcdad7;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.App {
+  background-color: #d5d2cf;
+  padding-bottom: 4rem;
+}
+
+div.tour {
+  margin-top: 5rem;
+  border-radius: 0.3rem;
+  box-shadow: 0rem 0.3rem 0.4rem 0rem rgba(0, 0, 0, 0.075);
+  max-width: 45%;
+  margin: {
+    top: 3.5rem;
+    left: auto;
+    right: auto;
+  }
+  background-color: white;
+  p {
+    text-align: center;
+    padding: {
+      left: 1rem;
+      right: 1rem;
+    }
+  }
+}
+
+#centered {
+  text-align: center;
+  margin: {
+    left: auto;
+    right: auto;
+    bottom: 0.4rem;
+  }
+  color: #35393c;
+}
+
+hr#centered {
+  max-width: 5rem;
+  background-color: $info-blue;
+  color: $info-blue;
+  border: none;
+  padding: 0.1rem;
+  margin-top: 0rem;
+}
