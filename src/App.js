@@ -1,11 +1,10 @@
 import Tour from "./Components/Tour";
 import { useState, useEffect } from 'react'
+const url = "https://course-api.com/react-tours-project";
 
 function App() {
-  const url = "https://course-api.com/react-tours-project";
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
-  const [tour, setTour] = useState({});
   const [tours, setTours] = useState({});
 
   useEffect(()=>{
@@ -20,11 +19,17 @@ function App() {
       (error) ? setIsError(true) : setIsError(false);
     });
   }, []);
+//  console.log(tours);
+
+          tours.map((tour) => {
+          return <Tour key={tour.id} name={tour.name} />
+          console.log(tour);
+        })
+
   return (
     <div className="App">
       <h1 id="centered">Our Tours</h1>
       <hr id="centered"></hr>
-      <Tour />
     </div>
   );
 }
