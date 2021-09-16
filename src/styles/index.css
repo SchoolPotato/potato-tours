@@ -58,6 +58,8 @@ div.tour a {
       -ms-user-select: none;
           user-select: none;
   color: lightskyblue;
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
 }
 
 img.tour {
