@@ -41,7 +41,7 @@ div.tour h5 {
   right: 3rem;
   margin: 0rem;
   margin-right: 2rem;
-  margin-top: 1rem;
+  margin-top: 0rem;
   padding: 0.3rem;
   border-radius: 0.3rem;
   background-color: #ebebeb;
@@ -57,6 +57,7 @@ div.tour a {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  color: lightskyblue;
 }
 
 img.tour {
