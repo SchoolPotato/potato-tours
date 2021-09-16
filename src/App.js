@@ -19,18 +19,24 @@ function App() {
       (error) ? setIsError(true) : setIsError(false);
     });
   }, []);
-  console.log(typeof tours);
+  //console.log(typeof tours);
 
-  return (
+  if(!isError && !isLoading){return (
     <div className="App">
       <h1 id="centered">Our Tours</h1>
       <hr id="centered"></hr>
-      {(isLoading == false) ? tours.map((tour) => {
+      {(isLoading === false) ? tours.map((tour) => {
         //console.log(tour);
-        return <Tour key={tour.id} name={tour.name} info={tour.info} image={tour.image} />
-      }): console.log("whoops")}
+        return <Tour key={tour.id} name={tour.name} info={tour.info} image={tour.image} price={tour.price} />
+      }): console.log("loading...")}
     </div>
-  );
+  )}
+
+  else{
+    return (
+      <h1>Whoops</h1>
+    )
+  }
 }
 
 export default App;

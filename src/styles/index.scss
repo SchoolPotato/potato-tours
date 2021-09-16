@@ -1,5 +1,6 @@
 // Variables
 $info-blue: #4898d1;
+$border: 0.3rem;
 
 body {
   margin: 0;
@@ -23,14 +24,16 @@ code {
 
 div.tour {
   margin-top: 5rem;
-  border-radius: 0.3rem;
-  box-shadow: 0rem 0.3rem 0.4rem 0rem rgba(0, 0, 0, 0.075);
+  border-radius: $border;
+  box-shadow: 0rem 0.3rem 0.4rem 0rem rgba(0, 0, 0, 0.25);
   max-width: 45%;
   margin: {
     top: 3.5rem;
     left: auto;
     right: auto;
   }
+  padding: 0rem;
+  padding-bottom: 0.05rem;
   background-color: white;
   p {
     text-align: center;
@@ -38,6 +41,43 @@ div.tour {
       left: 1rem;
       right: 1rem;
     }
+  }
+  h3 {
+    margin: {
+      top: 0rem;
+      left: 1rem;
+    }
+  }
+  h5 {
+    float: right;
+    right: 3rem;
+    margin: 0rem;
+    margin-right: 2rem;
+    margin-top: 1rem;
+    padding: 0.3rem;
+    border-radius: $border;
+    background-color: rgb(235, 235, 235);
+    color: $info-blue;
+  }
+  p {
+    color: $info-blue;
+    font-size: 110%;
+  }
+  a {
+    cursor: pointer;
+    user-select: none;
+  }
+}
+
+img.tour {
+  object-fit: cover;
+  padding: 0rem;
+  margin: 0rem;
+  width: 100%;
+  height: 25rem;
+  border: {
+    top-left-radius: $border;
+    top-right-radius: $border;
   }
 }
 
