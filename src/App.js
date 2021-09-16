@@ -16,7 +16,7 @@ function App() {
     .then((response)=>response.json())
     .then((tours)=>{
       setTours(tours);
-      setIsLoading(false);
+      /*setTimeout(()=>{*/setIsLoading(false)/*}, 4610)*/;
     })
     .catch((error)=>{
       console.log(error)
@@ -28,7 +28,7 @@ function App() {
   if(!isError && !isLoading){return (
     <div className="App">
       <h1 id="centered">Our Tours</h1>
-      <hr id="centered"></hr>
+      <hr id="centered" />
       {(isLoading === false) ? tours.map((tour) => {
         //console.log(tour);
         return <Tour key={tour.id} id={tour.id} name={tour.name} info={tour.info} image={tour.image} price={tour.price} removeTour={removeTour} />
@@ -36,11 +36,22 @@ function App() {
     </div>
   )}
 
-  else{
+  else if(isError){
     return (
-      <h1>Whoops</h1>
+      <>
+        <h1 id="error">Whoops!</h1>
+        <hr id="error" />
+        <p id="error">Something went wrong! We're sorry...<br/>Try again in a minute or two.</p>
+      </>
     )
   }
+
+  else if(isLoading){return (
+    <>
+      <h1 id="centered">Loading...</h1>
+      <hr id="animated" />
+    </>
+  )}
 }
 
 export default App;

@@ -90,7 +90,8 @@ img.tour {
   }
 }
 
-#centered {
+#centered,
+h1#error {
   text-align: center;
   margin: {
     left: auto;
@@ -132,4 +133,82 @@ hr#centered {
   border: none;
   padding: 0.1rem;
   margin-top: 0rem;
+}
+
+hr#animated {
+  max-width: 5rem;
+  background-color: $info-blue;
+  color: $info-blue;
+  border: none;
+  padding: 0.1rem;
+  margin-top: 0rem;
+  animation-duration: 5s;
+  animation-name: loading;
+}
+
+p#error {
+  color: $negative;
+  font-size: 110%;
+  text-align: center;
+  animation: error;
+  animation-delay: 0.2s;
+  animation-duration: 0.3s;
+}
+
+hr#error {
+  max-width: 5rem;
+  background-color: $negative;
+  color: $negative;
+  border: none;
+  padding: 0.1rem;
+  margin-top: 0rem;
+  animation-duration: 0.4s;
+  animation-name: error;
+}
+
+h1#error {
+  animation: error;
+  animation-delay: 0.1s;
+  animation-duration: 0.4s;
+}
+
+@keyframes loading {
+  from {
+    max-width: 5rem;
+    color: $negative;
+    background-color: $negative;
+  }
+  85% {
+    max-width: 95%;
+    background-color: green;
+    color: green;
+  }
+  to {
+    max-width: 5rem;
+    background-color: $info-blue;
+    color: $info-blue;
+  }
+}
+
+@keyframes error {
+  10%,
+  90% {
+    transform: translate3d(-1px, 1px, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 1px, 1px);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 1px);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 1px, 0);
+  }
 }
