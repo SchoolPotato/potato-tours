@@ -30,7 +30,7 @@ code {
 div.tour {
   margin-top: 5rem;
   border-radius: $border;
-  box-shadow: 0rem 0.3rem 0.4rem 0rem rgba(0, 0, 0, 0.25);
+  box-shadow: 0rem 0.4rem 0.5rem 0.1rem rgba(0, 0, 0, 0.1);
   max-width: 45%;
   margin: {
     top: 3.5rem;
@@ -50,7 +50,9 @@ div.tour {
   h3 {
     margin: {
       top: 0rem;
-      left: 1rem;
+    }
+    padding: {
+      left: 1.6rem;
     }
   }
   h5 {

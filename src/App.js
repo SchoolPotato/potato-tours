@@ -7,6 +7,10 @@ function App() {
   const [isError, setIsError] = useState(false);
   const [tours, setTours] = useState({});
 
+  const removeTour = (id) => {
+        setTours(tours.filter((tour) => tour.id !== id));
+  }
+
   useEffect(()=>{
     fetch(url)
     .then((response)=>response.json())
@@ -27,7 +31,7 @@ function App() {
       <hr id="centered"></hr>
       {(isLoading === false) ? tours.map((tour) => {
         //console.log(tour);
-        return <Tour key={tour.id} name={tour.name} info={tour.info} image={tour.image} price={tour.price} />
+        return <Tour key={tour.id} id={tour.id} name={tour.name} info={tour.info} image={tour.image} price={tour.price} removeTour={removeTour} />
       }): console.log("loading...")}
     </div>
   )}
