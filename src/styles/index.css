@@ -1,3 +1,7 @@
+* {
+  letter-spacing: 0.1em;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -79,6 +83,27 @@ img.tour {
   margin-right: auto;
   margin-bottom: 0.4rem;
   color: #35393c;
+}
+
+button#delete {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-size: 125%;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  border-radius: 0.3rem;
+  border: 1px #c44141 solid;
+  color: #c44141;
+}
+
+button#delete:hover {
+  background-color: #c44141;
+  color: white;
+  cursor: pointer;
 }
 
 hr#centered {

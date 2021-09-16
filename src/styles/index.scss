@@ -1,6 +1,11 @@
 // Variables
 $info-blue: #4898d1;
 $border: 0.3rem;
+$negative: rgb(196, 65, 65);
+
+* {
+  letter-spacing: 0.1em;
+}
 
 body {
   margin: 0;
@@ -91,6 +96,31 @@ img.tour {
     bottom: 0.4rem;
   }
   color: #35393c;
+}
+
+button#delete {
+  display: block;
+  margin: {
+    left: auto;
+    right: auto;
+    bottom: 1rem;
+  }
+  padding: {
+    left: 2rem;
+    right: 2rem;
+  }
+  font-size: 125%;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  border-radius: 0.3rem;
+  border: 1px $negative solid;
+  color: $negative;
+}
+
+button#delete:hover {
+  background-color: $negative;
+  color: white;
+  cursor: pointer;
 }
 
 hr#centered {
